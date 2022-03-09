@@ -5,7 +5,11 @@ function PeopleListItem(props) {
 
   const [homeworld, setHomeworld] = useState('');
 
-  console.log("person", person)
+  useEffect(() => {
+    fetch(person.homeworld)
+    .then(response => response.json())
+    .then(data => setHomeworld(data.name))
+  }, [person])
 
   return (
     <ul>
