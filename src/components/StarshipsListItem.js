@@ -14,7 +14,7 @@ function StarshipsListItem(props) {
     .then(response => setFirstPilot(response.name))
   }, [starship])
 
-  return <li>{starship.name} - First Pilot {firstPilot}</li>;
+  return <li>{starship.name}: {firstPilot}</li>;
 }
 
 export default StarshipsListItem;
